@@ -21,7 +21,7 @@ def poll_server():
                 for att in msg.attachments:
                     file_type = att.filename.split(".")[-1] 
                     if file_type == "csv":
-                        filename = f"{datetime.now().strftime("%Y-%m-%d")}.csv"
+                        filename = f"csv_{datetime.now().strftime("%Y-%m-%d %H:%M:%S")}.csv"
                         with open(f"{OUTPUT_DIRECTORY}/{filename}", "wb") as f:
                             f.write(att.payload)
                           

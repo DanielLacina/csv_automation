@@ -4,6 +4,8 @@ import time
 import logging
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
+import re
+from datetime import datetime
 
 INPUT_DIRECTORY = "inbound_attachments"
 OUTPUT_DIRECTORY = "ready_to_upload"
@@ -13,7 +15,7 @@ logging.basicConfig(
    level = logging.ERROR,
    format='%(asctime)s - %(levelname)s - %(message)s',
    filename = "csv_validation_errors.log",
-   filemode="w",
+   filemode="a",
 )
 
 def is_valid_email(email):
@@ -51,7 +53,7 @@ def process_csv(file_path):
                 logging.error(f"File: {file_path} - Invalid SignupDate in rows: {invalid_dates.index.tolist()}")
 
         if not missing_columns and not df.empty and invalid_emails.empty and invalid_dates.empty:
-            filename = f"csv_{datetime.now().strftime("%Y-%m-%d")}.csv"
+            filename = f"csv_{datetime.now().strftime("%Y-%m-%d %H:%M:%S")}.csv"
             df.to_csv(f"{OUTPUT_DIRECTORY}/{filename}")
             os.remove(file_path)
 
@@ -64,12 +66,6 @@ class CSVFileHandler(FileSystemEventHandler):
         if event.is_directory:
             return
         if event.src_path.endswith(".csv"): 
-            process_csv(event.src_path)
-         
-    def on_modified(self, event):
-        if event.is_directory: 
-            return
-        if event.src_path.endswith(".csv"):
             process_csv(event.src_path)
 
 def watch_directory(directory):
@@ -87,6 +83,8 @@ def watch_directory(directory):
 if __name__ == "__main__":
     if not os.path.exists(OUTPUT_DIRECTORY):
         os.makedirs(OUTPUT_DIRECTORY)
+    if not os.path.exists(INPUT_DIRECTORY):
+        os.makedirs(INPUT_DIRECTORY)
     for filename in os.listdir(INPUT_DIRECTORY): 
         file_type = filename.split(".")[-1]
         if file_type == "csv":

@@ -1,1 +1,23 @@
-2025-02-23 14:07:36,344 - ERROR - File: inbound_attachments/2025-02-23.csv - Missing columns: ['Name', 'Email', 'SignupDate']
+2025-02-23 14:18:30,843 - ERROR - File: inbound_attachments/2025-02-23.csv - Missing columns: ['Name', 'Email', 'SignupDate']
+2025-02-23 14:19:01,929 - ERROR - File: inbound_attachments/2025-02-23.csv - Missing columns: ['Name', 'Email', 'SignupDate']
+2025-02-23 14:19:47,555 - ERROR - File: inbound_attachments/2025-02-23.csv - Missing columns: ['Name', 'Email', 'SignupDate']
+2025-02-23 14:26:21,422 - ERROR - File: inbound_attachments/2025-02-23.csv - Error processing file: name 're' is not defined
+2025-02-23 14:28:46,840 - ERROR - File: inbound_attachments/2025-02-23.csv - Error processing file: name 're' is not defined
+2025-02-23 14:28:46,845 - ERROR - File: inbound_attachments/csv_2025-02-23 14:27:06.csv - Missing columns: ['Name', 'Email', 'SignupDate']
+2025-02-23 14:30:15,416 - ERROR - File: inbound_attachments/2025-02-23.csv - Error processing file: name 're' is not defined
+2025-02-23 14:30:15,420 - ERROR - File: inbound_attachments/csv_2025-02-23 14:27:06.csv - Missing columns: ['Name', 'Email', 'SignupDate']
+2025-02-23 14:31:40,017 - ERROR - File: inbound_attachments/2025-02-23.csv - Error processing file: name 're' is not defined
+2025-02-23 14:31:40,021 - ERROR - File: inbound_attachments/csv_2025-02-23 14:27:06.csv - Missing columns: ['Name', 'Email', 'SignupDate']
+2025-02-23 14:31:47,482 - ERROR - File: inbound_attachments/hello.csv - Error processing file: No columns to parse from file
+2025-02-23 14:31:47,485 - ERROR - File: inbound_attachments/hello.csv - Error processing file: No columns to parse from file
+2025-02-23 14:34:35,873 - ERROR - File: inbound_attachments/2025-02-23.csv - Error processing file: name 're' is not defined
+2025-02-23 14:34:35,878 - ERROR - File: inbound_attachments/csv_2025-02-23 14:27:06.csv - Missing columns: ['Name', 'Email', 'SignupDate']
+2025-02-23 14:34:35,880 - ERROR - File: inbound_attachments/hello.csv - Error processing file: No columns to parse from file
+2025-02-23 14:34:44,230 - ERROR - File: inbound_attachments/hello.csv - Error processing file: No columns to parse from file
+2025-02-23 14:34:59,027 - ERROR - File: inbound_attachments/hello.csv - Error processing file: No columns to parse from file
+2025-02-23 14:34:59,029 - ERROR - File: inbound_attachments/hello.csv - Error processing file: No columns to parse from file
+2025-02-23 14:35:33,794 - ERROR - File: inbound_attachments/2025-02-23.csv - Error processing file: name 're' is not defined
+2025-02-23 14:35:33,799 - ERROR - File: inbound_attachments/csv_2025-02-23 14:27:06.csv - Missing columns: ['Name', 'Email', 'SignupDate']
+2025-02-23 14:35:33,800 - ERROR - File: inbound_attachments/hello.csv - Error processing file: No columns to parse from file
+2025-02-23 14:37:13,138 - ERROR - File: inbound_attachments/user.csv - Error processing file: name 're' is not defined
+2025-02-23 14:41:30,519 - ERROR - File: inbound_attachments/csv_2025-02-23 14:39:46.csv - Error processing file: name 'datetime' is not defined
