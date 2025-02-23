@@ -1,0 +1,1 @@
+2025-02-23 14:07:36,344 - ERROR - File: inbound_attachments/2025-02-23.csv - Missing columns: ['Name', 'Email', 'SignupDate']
